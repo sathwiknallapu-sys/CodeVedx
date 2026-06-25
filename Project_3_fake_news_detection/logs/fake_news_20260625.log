@@ -1,0 +1,71 @@
+2026-06-25 16:58:40,669 | INFO | Loading dataset...
+2026-06-25 16:58:40,672 | ERROR | Dataset file not found.
+2026-06-25 16:58:40,672 | ERROR | [Errno 2] No such file or directory: 'C:\\Users\\sathw\\OneDrive\\Desktop\\codevedx\\Project_3\\dataset\\fake_news.csv'
+2026-06-25 17:00:25,801 | INFO | Loading dataset...
+2026-06-25 17:00:25,807 | ERROR | No columns to parse from file
+2026-06-25 17:00:25,808 | ERROR | No columns to parse from file
+2026-06-25 17:01:55,861 | INFO | Loading dataset...
+2026-06-25 17:01:55,868 | INFO | Dataset loaded successfully.
+2026-06-25 17:01:55,871 | INFO | Cleaning dataset...
+2026-06-25 17:01:58,254 | INFO | TF-IDF training completed.
+2026-06-25 17:01:58,301 | INFO | Vectorizer saved successfully.
+2026-06-25 17:01:58,303 | INFO | Model saved successfully.
+2026-06-25 17:01:58,308 | INFO | Training completed.
+2026-06-25 17:11:49,194 | INFO | [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+2026-06-25 17:11:49,196 | INFO | [33mPress CTRL+C to quit[0m
+2026-06-25 17:11:49,377 | INFO |  * Restarting with watchdog (windowsapi)
+2026-06-25 17:11:52,040 | WARNING |  * Debugger is active!
+2026-06-25 17:11:52,043 | INFO |  * Debugger PIN: 133-687-184
+2026-06-25 17:12:36,582 | INFO | 127.0.0.1 - - [25/Jun/2026 17:12:36] "GET / HTTP/1.1" 200 -
+2026-06-25 17:12:36,765 | INFO | 127.0.0.1 - - [25/Jun/2026 17:12:36] "GET /static/css/style.css HTTP/1.1" 200 -
+2026-06-25 17:12:36,915 | INFO | 127.0.0.1 - - [25/Jun/2026 17:12:36] "[33mGET /favicon.ico HTTP/1.1[0m" 404 -
+2026-06-25 17:12:50,688 | INFO | 127.0.0.1 - - [25/Jun/2026 17:12:50] "POST /predict HTTP/1.1" 200 -
+2026-06-25 17:12:50,746 | INFO | 127.0.0.1 - - [25/Jun/2026 17:12:50] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2026-06-25 17:12:50,795 | INFO | 127.0.0.1 - - [25/Jun/2026 17:12:50] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2026-06-25 17:14:51,999 | INFO | Prediction completed successfully.
+2026-06-25 17:14:52,008 | INFO | 127.0.0.1 - - [25/Jun/2026 17:14:52] "POST /predict HTTP/1.1" 200 -
+2026-06-25 17:14:52,056 | INFO | 127.0.0.1 - - [25/Jun/2026 17:14:52] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2026-06-25 17:14:52,136 | INFO | 127.0.0.1 - - [25/Jun/2026 17:14:52] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2026-06-25 17:15:05,579 | INFO | 127.0.0.1 - - [25/Jun/2026 17:15:05] "GET / HTTP/1.1" 200 -
+2026-06-25 17:15:05,627 | INFO | 127.0.0.1 - - [25/Jun/2026 17:15:05] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2026-06-25 17:15:05,675 | INFO | 127.0.0.1 - - [25/Jun/2026 17:15:05] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2026-06-25 17:15:10,001 | INFO | Prediction completed successfully.
+2026-06-25 17:15:10,002 | INFO | 127.0.0.1 - - [25/Jun/2026 17:15:10] "POST /predict HTTP/1.1" 200 -
+2026-06-25 17:15:10,040 | INFO | 127.0.0.1 - - [25/Jun/2026 17:15:10] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2026-06-25 17:15:10,080 | INFO | 127.0.0.1 - - [25/Jun/2026 17:15:10] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2026-06-25 17:16:41,897 | INFO |  * Detected change in 'C:\\Users\\sathw\\OneDrive\\Desktop\\codevedx\\Project_3\\prepare_dataset.py', reloading
+2026-06-25 17:16:44,486 | INFO |  * Restarting with watchdog (windowsapi)
+2026-06-25 17:16:54,292 | WARNING |  * Debugger is active!
+2026-06-25 17:16:54,298 | INFO |  * Debugger PIN: 133-687-184
+2026-06-25 17:16:55,651 | INFO |  * Detected change in 'C:\\Users\\sathw\\OneDrive\\Desktop\\codevedx\\Project_3\\prepare_dataset.py', reloading
+2026-06-25 17:16:55,653 | INFO |  * Detected change in 'C:\\Users\\sathw\\OneDrive\\Desktop\\codevedx\\Project_3\\prepare_dataset.py', reloading
+2026-06-25 17:16:56,738 | INFO |  * Restarting with watchdog (windowsapi)
+2026-06-25 17:17:04,960 | WARNING |  * Debugger is active!
+2026-06-25 17:17:04,963 | INFO |  * Debugger PIN: 133-687-184
+2026-06-25 17:29:52,130 | INFO | Loading dataset...
+2026-06-25 17:29:52,193 | INFO | Dataset loaded successfully.
+2026-06-25 17:29:52,197 | INFO | Cleaning dataset...
+2026-06-25 17:30:01,977 | INFO | TF-IDF training completed.
+2026-06-25 17:30:02,624 | INFO | Vectorizer saved successfully.
+2026-06-25 17:30:02,625 | INFO | Model saved successfully.
+2026-06-25 17:30:02,626 | INFO | Training completed.
+2026-06-25 17:32:35,209 | INFO | [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+2026-06-25 17:32:35,210 | INFO | [33mPress CTRL+C to quit[0m
+2026-06-25 17:32:35,228 | INFO |  * Restarting with watchdog (windowsapi)
+2026-06-25 17:32:38,383 | WARNING |  * Debugger is active!
+2026-06-25 17:32:38,387 | INFO |  * Debugger PIN: 133-687-184
+2026-06-25 17:32:42,778 | INFO | 127.0.0.1 - - [25/Jun/2026 17:32:42] "GET / HTTP/1.1" 200 -
+2026-06-25 17:32:43,065 | INFO | 127.0.0.1 - - [25/Jun/2026 17:32:43] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2026-06-25 17:32:57,692 | INFO | Prediction completed successfully.
+2026-06-25 17:32:57,711 | INFO | 127.0.0.1 - - [25/Jun/2026 17:32:57] "POST /predict HTTP/1.1" 200 -
+2026-06-25 17:32:57,851 | INFO | 127.0.0.1 - - [25/Jun/2026 17:32:57] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2026-06-25 17:32:57,968 | INFO | 127.0.0.1 - - [25/Jun/2026 17:32:57] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2026-06-25 17:33:35,986 | INFO | 127.0.0.1 - - [25/Jun/2026 17:33:35] "GET / HTTP/1.1" 200 -
+2026-06-25 17:33:36,115 | INFO | 127.0.0.1 - - [25/Jun/2026 17:33:36] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2026-06-25 17:33:36,193 | INFO | 127.0.0.1 - - [25/Jun/2026 17:33:36] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2026-06-25 17:35:31,848 | INFO | Prediction completed successfully.
+2026-06-25 17:35:31,858 | INFO | 127.0.0.1 - - [25/Jun/2026 17:35:31] "POST /predict HTTP/1.1" 200 -
+2026-06-25 17:35:31,923 | INFO | 127.0.0.1 - - [25/Jun/2026 17:35:31] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2026-06-25 17:35:31,988 | INFO | 127.0.0.1 - - [25/Jun/2026 17:35:31] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -

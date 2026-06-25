@@ -1,0 +1,1 @@
+console.log("AI Fake News Detection Tool Loaded");

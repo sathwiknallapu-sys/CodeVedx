@@ -1,0 +1,23 @@
+# Python
+__pycache__/
+*.pyc
+
+# VS Code
+.vscode/
+
+# Jupyter
+.ipynb_checkpoints/
+
+# Environment
+venv/
+env/
+
+# Model Files
+model/*.pkl
+
+# Reports
+reports/*.png
+
+# System Files
+.DS_Store
+Thumbs.db
