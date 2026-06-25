@@ -1,0 +1,230 @@
+============================================================
+  STUDENT PERFORMANCE PREDICTION SYSTEM
+  Model Evaluation Report
+  Generated: 2026-06-25 08:54:59
+============================================================
+
+============================================================
+  1. DATASET SUMMARY
+============================================================
+
+  Total samples   : 500
+  Training set    : 400 samples (80%)
+  Test set        : 100 samples (20%)
+  Features used   : 10
+  Feature list    : ['attendance_percentage', 'study_hours_per_day', 'previous_sem_marks', 'assignments_completed', 'extracurricular_hours', 'sleep_hours', 'parental_support', 'internet_access', 'study_attendance_ratio', 'effort_index']
+
+  Class distribution (test set):
+    At Risk     :  12 ( 12.0%)  ####
+    Average     :  61 ( 61.0%)  ####################
+    Excellent   :   1 (  1.0%)  
+    Good        :  26 ( 26.0%)  ########
+
+============================================================
+  2. REGRESSION MODEL (Predicts exact final marks)
+============================================================
+
+  Model           : LinearRegression
+
+  MAE  (Mean Absolute Error)    : 5.5078
+       -> On average, predicted marks are off by 5.5 marks
+  RMSE (Root Mean Squared Error) : 7.1183
+       -> Penalises large errors more; still < 8 marks on a 100pt scale
+  R²   (Coefficient of Det.)     : 0.5666
+       -> Model explains 56.7% of the variance in final marks
+  MAPE (Mean Abs. % Error)       : 8.80%
+
+--- Cross-Validation (5-fold, on training data) ---
+
+  R² per fold: [0.595, 0.705, 0.613, 0.57, 0.458]
+  Mean R²    : 0.5880  (+/- 0.0794)
+  Interpretation: Some variance across folds (std = 0.0794)
+
+--- Prediction Error Bracket Analysis ---
+
+  Within ±  3 marks :  37/100  (37.0%)
+  Within ±  5 marks :  56/100  (56.0%)
+  Within ±  8 marks :  76/100  (76.0%)
+  Within ± 10 marks :  82/100  (82.0%)
+  Within ± 15 marks :  96/100  (96.0%)
+
+--- 5 Best Predictions (closest to actual) ---
+
+  Actual:   59.7  Predicted:   59.7  Error: 0.04
+  Actual:   67.9  Predicted:   68.0  Error: 0.10
+  Actual:   59.7  Predicted:   60.0  Error: 0.32
+  Actual:   50.6  Predicted:   51.0  Error: 0.38
+  Actual:   70.4  Predicted:   70.9  Error: 0.49
+
+--- 5 Worst Predictions (furthest from actual) ---
+
+  Actual:   49.4  Predicted:   68.2  Error: 18.79
+  Actual:   70.1  Predicted:   52.3  Error: 17.77
+  Actual:   70.3  Predicted:   54.2  Error: 16.14
+  Actual:   79.8  Predicted:   64.6  Error: 15.16
+  Actual:   73.0  Predicted:   58.2  Error: 14.78
+
+============================================================
+  3. CLASSIFICATION MODEL (Predicts performance category)
+============================================================
+
+  Model           : LogisticRegression
+  Overall Accuracy: 0.7300  (73.0%)
+
+  Per-Class Report:
+              precision    recall  f1-score   support
+
+     At Risk       0.83      0.42      0.56        12
+     Average       0.73      0.92      0.81        61
+   Excellent       0.00      0.00      0.00         1
+        Good       0.71      0.46      0.56        26
+
+    accuracy                           0.73       100
+   macro avg       0.57      0.45      0.48       100
+weighted avg       0.73      0.73      0.71       100
+
+
+--- Confusion Matrix ---
+
+  Actual \ PredictedAt Risk      Average      Excellent    Good         
+  ----------------------------------------------------------------------
+  At Risk           5            7            0            0            
+  Average           1            56           0            4            
+  Excellent         0            0            0            1            
+  Good              0            14           0            12           
+
+  Reading the matrix: rows = actual, columns = predicted.
+  Diagonal values = correct predictions.
+  Off-diagonal = misclassifications (inspect for costly confusions).
+
+--- Cross-Validation (5-fold, on training data) ---
+
+  F1 per fold : [0.71, 0.729, 0.73, 0.72, 0.632]
+  Mean F1     : 0.7042  (+/- 0.0370)
+
+--- Prediction Confidence Distribution (by true class) ---
+
+  At Risk     : n= 12  mean confidence=75.1%  min=55.0%  max=95.6%
+  Average     : n= 61  mean confidence=78.6%  min=51.7%  max=95.9%
+  Excellent   : n=  1  mean confidence=83.5%  min=83.5%  max=83.5%
+  Good        : n= 26  mean confidence=69.4%  min=51.4%  max=86.6%
+
+============================================================
+  4. FEATURE IMPORTANCE
+============================================================
+
+  Source: Regression model (Linear - |coef| normalized)
+
+  effort_index                : 0.3575  #####################
+  study_hours_per_day         : 0.2869  #################
+  assignments_completed       : 0.1927  ###########
+  attendance_percentage       : 0.1471  ########
+  previous_sem_marks          : 0.0078  
+  internet_access             : 0.0026  
+  study_attendance_ratio      : 0.0019  
+  parental_support            : 0.0018  
+  sleep_hours                 : 0.0009  
+  extracurricular_hours       : 0.0009  
+
+============================================================
+  5. TRAINING RUN METADATA
+============================================================
+
+  Full model comparison from the last training run:
+
+{
+    "regression": {
+        "best_model": "Linear Regression",
+        "metrics": {
+            "Linear Regression": {
+                "mae": 5.508,
+                "rmse": 7.118,
+                "r2": 0.567
+            },
+            "Random Forest Regressor": {
+                "mae": 5.834,
+                "rmse": 7.659,
+                "r2": 0.498
+            }
+        }
+    },
+    "classification": {
+        "best_model": "Logistic Regression",
+        "metrics": {
+            "Logistic Regression": {
+                "accuracy": 0.73,
+                "precision": 0.727,
+                "recall": 0.73,
+                "f1": 0.707,
+                "confusion_matrix": [
+                    [
+                        5,
+                        7,
+                        0,
+                        0
+                    ],
+                    [
+                        1,
+                        56,
+                        0,
+                        4
+                    ],
+                    [
+                        0,
+                        0,
+                        0,
+                        1
+                    ],
+                    [
+                        0,
+                        14,
+                        0,
+                        12
+                    ]
+                ]
+            },
+            "Random Forest Classifier": {
+                "accuracy": 0.73,
+                "precision": 0.719,
+                "recall": 0.73,
+                "f1": 0.698,
+                "confusion_matrix": [
+                    [
+                        4,
+                        7,
+                        0,
+                        1
+                    ],
+                    [
+                        1,
+                        58,
+                        0,
+                        2
+                    ],
+                    [
+                        0,
+                        0,
+                        0,
+                        1
+                    ],
+                    [
+                        1,
+                        14,
+                        0,
+                        11
+                    ]
+                ]
+            }
+        },
+        "classes": [
+            "At Risk",
+            "Average",
+            "Excellent",
+            "Good"
+        ]
+    }
+}
+
+============================================================
+  END OF REPORT
+============================================================

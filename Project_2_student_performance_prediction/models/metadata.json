@@ -1,0 +1,104 @@
+{
+  "feature_names": [
+    "attendance_percentage",
+    "study_hours_per_day",
+    "previous_sem_marks",
+    "assignments_completed",
+    "extracurricular_hours",
+    "sleep_hours",
+    "parental_support",
+    "internet_access",
+    "study_attendance_ratio",
+    "effort_index"
+  ],
+  "regression": {
+    "best_model": "Linear Regression",
+    "metrics": {
+      "Linear Regression": {
+        "mae": 5.508,
+        "rmse": 7.118,
+        "r2": 0.567
+      },
+      "Random Forest Regressor": {
+        "mae": 5.834,
+        "rmse": 7.659,
+        "r2": 0.498
+      }
+    }
+  },
+  "classification": {
+    "best_model": "Logistic Regression",
+    "metrics": {
+      "Logistic Regression": {
+        "accuracy": 0.73,
+        "precision": 0.727,
+        "recall": 0.73,
+        "f1": 0.707,
+        "confusion_matrix": [
+          [
+            5,
+            7,
+            0,
+            0
+          ],
+          [
+            1,
+            56,
+            0,
+            4
+          ],
+          [
+            0,
+            0,
+            0,
+            1
+          ],
+          [
+            0,
+            14,
+            0,
+            12
+          ]
+        ]
+      },
+      "Random Forest Classifier": {
+        "accuracy": 0.73,
+        "precision": 0.719,
+        "recall": 0.73,
+        "f1": 0.698,
+        "confusion_matrix": [
+          [
+            4,
+            7,
+            0,
+            1
+          ],
+          [
+            1,
+            58,
+            0,
+            2
+          ],
+          [
+            0,
+            0,
+            0,
+            1
+          ],
+          [
+            1,
+            14,
+            0,
+            11
+          ]
+        ]
+      }
+    },
+    "classes": [
+      "At Risk",
+      "Average",
+      "Excellent",
+      "Good"
+    ]
+  }
+}
