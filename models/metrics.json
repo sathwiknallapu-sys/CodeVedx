@@ -1,0 +1,8 @@
+{
+  "model_type": "random_forest",
+  "mae": 17.145,
+  "rmse": 21.171,
+  "r2_score": 0.8794,
+  "n_train": 480,
+  "n_test": 120
+}
